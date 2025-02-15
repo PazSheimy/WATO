@@ -65,7 +65,50 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
-/* ✅ Portfolio Section */
+/* ✅ Our Expertise Section (Matches Portfolio) */
+.services {
+    padding: 60px 0;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #ffd700;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.service-item h3 {
+    color: #ffd700;
+    font-size: 22px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* ✅ Portfolio Section (Matches Expertise Section) */
 .portfolio {
     padding: 60px 0;
     background: #1a1a1a;
@@ -90,17 +133,6 @@ nav ul li a:hover {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2);
-}
-
-.portfolio-item h3 {
-    color: #ffd700;
-    font-size: 22px;
-}
-
-.portfolio-item p {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 1.5;
 }
 
 .portfolio-item:hover {
