@@ -18,7 +18,7 @@ header {
     background: #1a1a1a;
     padding: 15px 0;
     width: 100%;
-    position: fixed;
+    position: fixed; /* ✅ Keeps it at the top */
     top: 0;
     left: 0;
     z-index: 1000;
@@ -27,14 +27,16 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* ✅ Ensures left-right spacing */
+    width: 80%;
+    margin: auto;
 }
 
 /* ✅ Logo Styling */
 .logo-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* ✅ Aligns text left */
 }
 
 .logo {
@@ -54,64 +56,42 @@ header {
 }
 
 /* ✅ Navigation Styling */
-.nav-links {
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
 }
 
-.nav-links li {
+nav ul li {
     margin-left: 20px;
 }
 
-.nav-links li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
 }
 
-.nav-links li a:hover {
+nav ul li a:hover {
     color: #ffd700;
 }
 
-/* ✅ Hamburger Menu Styling */
-.menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-
-/* ✅ Responsive Navigation (Hamburger Menu) */
+/* ✅ Responsive Navigation */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-links {
-        display: none;
+    .header-container {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(26, 26, 26, 0.95);
-        padding: 10px 0;
+        align-items: center;
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* ✅ Show menu when checkbox is checked */
-    .menu-toggle:checked + .menu-icon + nav .nav-links {
-        display: flex;
+    nav ul li {
+        margin: 5px 0;
     }
 }
 
@@ -120,7 +100,7 @@ header {
     background: url('hero-background.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 160px 20px;
+    padding: 160px 20px; /* ✅ Prevents overlap with header */
 }
 
 .hero-content {
@@ -142,7 +122,23 @@ header {
     margin-bottom: 20px;
 }
 
-/* ✅ Our Expertise Section */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffd700;
+    color: #121212;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6b800;
+}
+
+/* ✅ Our Expertise Section (Matches Portfolio) */
 .services {
     padding: 60px 0;
     background: #1a1a1a;
@@ -231,7 +227,19 @@ header {
     line-height: 1.5;
 }
 
-/* ✅ Portfolio Section */
+.industry-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.industry-item ul li {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+
+/* ✅ Portfolio Section (Matches Expertise Section) */
 .portfolio {
     padding: 60px 0;
     background: #1a1a1a;
@@ -264,6 +272,7 @@ header {
 }
 
 /* ✅ Contact Section */
+/* ✅ Contact Section (Styled Like Portfolio & Expertise) */
 .contact {
     padding: 60px 0;
     background: #1a1a1a;
@@ -306,6 +315,7 @@ header {
     transform: translateY(-5px);
     box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.3);
 }
+
 
 /* ✅ Footer */
 footer {
