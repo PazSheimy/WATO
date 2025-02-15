@@ -65,35 +65,45 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
-/* ✅ Projects & Experience Section */
-.projects {
-    padding: 50px 0;
+/* ✅ Portfolio Section */
+.portfolio {
+    padding: 60px 0;
     background: #1a1a1a;
+    text-align: center;
 }
 
-.projects h2 {
+.portfolio h2 {
     font-size: 36px;
     color: #ffd700;
+    margin-bottom: 30px;
 }
 
-.projects-grid {
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 20px;
 }
 
-.project {
+.portfolio-item {
     background: #222;
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2);
 }
 
-.project h3 {
+.portfolio-item h3 {
     color: #ffd700;
+    font-size: 22px;
 }
 
-.project:hover {
+.portfolio-item p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.portfolio-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.3);
 }
