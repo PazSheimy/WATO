@@ -512,3 +512,29 @@ em { font-style: italic; color: var(--accent); }
     }
     html { scroll-behavior: auto; }
 }
+
+/* ---------- Live products ---------- */
+
+.products-head { margin-top: 72px; }
+
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card-link { display: flex; flex-direction: column; color: inherit; }
+.card-link p { flex: 1; }
+.card-link:hover { border-color: var(--accent); }
+
+.card-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.icon-sm { width: 16px; height: 16px; stroke: currentColor; fill: none; transition: transform 0.25s var(--ease); }
+.card-link:hover .icon-sm { transform: translateX(3px); }
+
+@media (max-width: 960px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid-3 { grid-template-columns: 1fr; } .products-head { margin-top: 48px; } }
