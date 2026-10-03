@@ -542,3 +542,5 @@ em { font-style: italic; color: var(--accent); }
 .card-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; }
 .card-links .card-open { margin-top: 0; }
 .card-open:hover .icon-sm { transform: translateX(3px); }
+
+#apps { scroll-margin-top: 96px; }
