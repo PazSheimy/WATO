@@ -538,3 +538,7 @@ em { font-style: italic; color: var(--accent); }
 
 @media (max-width: 960px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .grid-3 { grid-template-columns: 1fr; } .products-head { margin-top: 48px; } }
+
+.card-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 18px; }
+.card-links .card-open { margin-top: 0; }
+.card-open:hover .icon-sm { transform: translateX(3px); }
